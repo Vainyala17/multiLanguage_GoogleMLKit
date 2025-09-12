@@ -136,7 +136,7 @@ class TranslationProvider extends ChangeNotifier {
         .value;
   }
 
-  // SINGLE TEXT TRANSLATION (for static UI text)
+  /// SINGLE TEXT TRANSLATION (for static UI text)
   String translateText(String text) {
     if (_selectedLanguage == TranslateLanguage.english || text.trim().isEmpty) {
       return text;
@@ -255,7 +255,6 @@ class TranslationProvider extends ChangeNotifier {
         _translationCache[text]!.containsKey(languageCode)) {
       return _translationCache[text]![languageCode]!;
     }
-
     return text; // Return original if not translated yet
   }
 
@@ -277,7 +276,7 @@ class TranslationProvider extends ChangeNotifier {
 }
 
 class KaraSahayakApiService {
-  static const String baseUrl = 'http://192.168.0.106:5000';
+  static const String baseUrl = 'https://259f74902f0a.ngrok-free.app';  //'http://192.168.0.106:5000';
 
   /// 1️⃣ Login -> get token
   static Future<String?> login(String username, String password) async {
