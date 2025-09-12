@@ -3,6 +3,8 @@ import 'package:translation_gmlkit/pre_data_translate_page.dart';
 import 'package:translation_gmlkit/translate_page.dart';
 import 'package:provider/provider.dart';
 
+import 'apidata_translate_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -30,11 +32,12 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: HomeScreen(),
-        routes: {
-          '/profile': (context) => ProfileScreen(),
-          '/settings': (context) => SettingsScreen(),
-        },
+        home: KaraSahayakScreen(),
+        // home: HomeScreen(),
+        // routes: {
+        //   '/profile': (context) => ProfileScreen(),
+        //   '/settings': (context) => SettingsScreen(),
+        // },
       ),
     );
   }
